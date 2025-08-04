@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 4%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar.logo {
+    height: 40px;
+    width: max(10%,80px);
+  }
+  
+  .navbar.profile {
+    height: 35px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  
