@@ -25,11 +25,13 @@
     max-width: 120px;
     padding: 10px;
 }
-.add-btn{
-    max-width: 120px;
-    border: none;
-    padding: 10px;
-    background-color: black;
+.add-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black; /* optional style */
     color: white;
+    border: none;
     cursor: pointer;
-}
+    border-radius: 5px;
+  }
+  
