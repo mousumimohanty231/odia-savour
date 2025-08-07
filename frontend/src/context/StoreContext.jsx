@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { useState } from "react";
 export const StoreContext=createContext(null);
 
+
 const StoreContextProvider=(props) =>{
     const [cartItems,setCartItems]=useState({});
     const addToCart=(itemId) =>{
