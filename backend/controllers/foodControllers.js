@@ -36,24 +36,17 @@ const listFood = async (req, res) => {
         console.log(error);
         res.json({ success: false, message: "Error fetching food items" });
     }
-};
-
-// ✅ Remove Food Item
-const removeFood = async (req, res) => {
+}
+//remove food item
+<<<<<<< HEAD
+const removeFood= async(req, res) => {
+=======
+const removefood= async(req, res) => {
+>>>>>>> cdae027 (item added)
     try {
-        const food = await foodModel.findById(req.body.id);
-
-        if (!food) {
-            return res.json({ success: false, message: "Food item not found" });
-        }
-
-        // Delete image from uploads folder if exists
-        const imagePath = path.join("uploads", food.image);
-        if (fs.existsSync(imagePath)) {
-            fs.unlinkSync(imagePath);
-        }
-
-        // Delete food record from database
+        const food= await foodModel.findById(req.body.id);
+        fs.unlinkSync(`uploads/${food.image}`,()=>{}); 
+   
         await foodModel.findByIdAndDelete(req.body.id);
 
         res.json({ success: true, message: "Food item removed successfully" });
@@ -61,6 +54,10 @@ const removeFood = async (req, res) => {
         console.log(error);
         res.json({ success: false, message: "Error removing food item" });
     }
-};
+}
 
-export { addFood, listFood, removeFood };
+<<<<<<< HEAD
+export {addFood,listFood, removeFood};
+=======
+ export {addFood,listFood,removefood};
+>>>>>>> cdae027 (item added)
