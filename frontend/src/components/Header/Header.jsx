@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className='header'>
       <div className="header-contents">
-        <h2>Order your favorite food here</h2>
+        <h4>Craving authentic Odia flavors? 🍛 Order now from our app and get the taste of Odisha delivered to your doorstep!"</h4>
         <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary experties. Our  mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
         <button>View Menu</button>
       </div>
