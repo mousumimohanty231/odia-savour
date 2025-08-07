@@ -29,6 +29,23 @@ const addFood = async (req, res) => {
 
 // ✅ Get All Food Items
 const listFood = async (req, res) => {
+
+    try{
+        const foods= await foodModel.find({});
+        res.json({success: true, data: foods});
+
+    }catch(error) {
+        console.log(error);
+        res.json({success: false, message: "Error fetching food items"});
+    }
+}
+//remove food item
+
+
+
+const removefood= async(req, res) => {
+
+
     try {
         const foods = await foodModel.find({});
         res.json({ success: true, data: foods });
@@ -37,6 +54,7 @@ const listFood = async (req, res) => {
         res.json({ success: false, message: "Error fetching food items" });
     }
 };
+
 
 // ✅ Remove Food Item
 const removeFood = async (req, res) => {
@@ -64,3 +82,9 @@ const removeFood = async (req, res) => {
 };
 
 export { addFood, listFood, removeFood };
+
+export {addFood,listFood, removeFood};
+
+ export {addFood,listFood,removefood};
+
+
